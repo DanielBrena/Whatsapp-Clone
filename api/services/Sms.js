@@ -1,7 +1,8 @@
 var plivo = require('plivo');
+//Agrega aqui los que te proporcionan en tu cuenta de Plivo
 var p = plivo.RestAPI({
-  authId: 'MANZE2YMRIYTIYYMNHMJ',
-  authToken: 'NmNhYmU5OTk0MTc0NTM5MTY4MzM3OGU0OTRjOWZh'
+  authId: '',
+  authToken: ''
 });
 
 module.exports = {

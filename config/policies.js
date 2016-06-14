@@ -48,4 +48,16 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+  /**
+   * Nuestras politicas.
+   */
+  UsersController:{
+    findOne:['isActivated'],
+    changeStatus:['isActivated'],
+    changeImage:['isActivated'],
+    addContact:['isValidPhone','isActivated']
+  },
+  MessagesController:{
+    create:['isActivated']
+  }
 };

@@ -27,6 +27,14 @@ module.exports = {
     creator:{
       model:'users'
     }
+  },
+  afterCreate(values,cb){
+    Groups.findOne(values.id).exec(function(error,group){
+      if(group){
+        group.members.add(values.creator);
+        group.save(cb);
+      }
+    });
   }
 };
 
